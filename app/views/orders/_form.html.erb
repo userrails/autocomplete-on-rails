@@ -1,4 +1,4 @@
-<%= form_with(model: order, local: true) do |form| %>
+<%= simple_form_for @order do |f| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -11,7 +11,13 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%#= form.label :client_id %>
+    <%#= form.text_field :client_id, id: :order_client_id %>
+    <%= f.input :client, :as => :autocomplete, :source_query => autocomplete_client_name_clients_url %>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

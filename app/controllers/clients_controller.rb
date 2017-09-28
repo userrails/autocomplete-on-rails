@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  autocomplete :client, :name 
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   # GET /clients
@@ -69,6 +70,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :order_id)
+      params.require(:client).permit(:name)
     end
 end
