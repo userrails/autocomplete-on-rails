@@ -17,4 +17,5 @@
 //= require bootstrap
 //= require bootstrap3-typeahead.min
 //= require bootstrap-autocomplete-input.min
+//= require jquery_nested_form
 //= require_tree .

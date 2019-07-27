@@ -61,6 +61,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'simple_form'
 gem 'bootstrap_autocomplete_input'
 
+gem "nested_form"
+
 # Tooltips and popovers depend on tether for positioning. If you use them, add tether to the Gemfile:
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

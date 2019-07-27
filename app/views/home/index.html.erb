@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<%= simple_form_for @order do |f| %>
+  <div class="field">
+    <%= f.input :client, :as => :autocomplete, :source_query => autocomplete_client_name_clients_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
